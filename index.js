@@ -47,11 +47,12 @@ function createRock(x) {
       rock.remove()
     }
   }
+  window.requestAnimationFrame(moveRock)
   
   if ( checkCollision(rock) ) {
     return endGame()
   }
-  window.requestAnimationFrame(moveRock)
+  
   ROCKS.push(rock)
   return rock
 }
