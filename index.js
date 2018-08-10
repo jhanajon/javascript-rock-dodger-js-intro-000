@@ -71,6 +71,7 @@ function endGame() {
 }
 
 function moveDodger(e) {
+  const code = e.which
  if (e.which === LEFT_ARROW) {
     moveDodgerLeft()
     e.preventDefault()
