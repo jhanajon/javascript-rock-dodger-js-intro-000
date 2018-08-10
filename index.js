@@ -41,7 +41,7 @@ function createRock(x) {
  
   function moveRock(top) {
       rock.style.top = `${top += 2}px`
-      if ( top > 360 ) {
+      if ( top < 360 ) {
         window.requestAnimationFrame(moveRock)
     }
   }
