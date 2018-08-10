@@ -65,6 +65,8 @@ function endGame() {
     }
     
     document.removeEventListener('keydown', moveDodger)
+    START.innerHTML = 'Play again?'
+    START.style.display = 'inline'
     window.alert = "YOU LOSE!" 
 }
 
