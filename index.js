@@ -13,12 +13,6 @@ const START = document.getElementById('start')
 var gameInterval = null
 
 
-
-/**
- * Be aware of what's above this line,
- * but all of your work should happen below.
- */
-
 function checkCollision(rock) {
 
   const top = positionToInteger(rock.style.top)
@@ -59,12 +53,6 @@ function createRock(x) {
   return rock
 }
 
-/**
- * End the game by clearing `gameInterval`,
- * removing all ROCKS from the DOM,
- * and removing the `moveDodger` event listener.
- * Finally, alert "YOU LOSE!" to the player.
- */
 function endGame() {
     clearInterval()
     
@@ -72,7 +60,6 @@ function endGame() {
        ROCKS[i].remove()
     }
     
-
     window.moveDodger=function(){return false;};
     window.alert = "YOU LOSE!" 
 }
@@ -108,11 +95,6 @@ function moveDodgerRight() {
    }
 }
 
-
-/**
- * @param {string} p The position property
- * @returns {number} The position as an integer (without 'px')
- */
 function positionToInteger(p) {
   return parseInt(p.split('px')[0]) || 0
 }
@@ -124,5 +106,5 @@ function start() {
 
   gameInterval = setInterval(function() {
     createRock(Math.floor(Math.random() *  (GAME_WIDTH - 20)))
-  }, 1000)
+  }, 100)
 }
