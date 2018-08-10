@@ -40,6 +40,7 @@ function createRock(x) {
   
   
   var top = rock.style.top = 0
+  
   GAME.appendChild(rock)
  
   function moveRock(top) {
