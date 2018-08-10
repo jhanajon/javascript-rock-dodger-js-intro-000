@@ -84,14 +84,19 @@ function moveDodger(e) {
 //     e.stopPropagation()
 //   }
   
-
-  
-  if (e.which === RIGHT_ARROW) {
+  if (code === LEFT_ARROW) {
+    moveDodgerLeft()
+  } else if (code === RIGHT_ARROW) {
     moveDodgerRight()
-    e.preventDefault()
-    e.stopPropagation()
   }
 }
+  
+//   if (e.which === RIGHT_ARROW) {
+//     moveDodgerRight()
+//     e.preventDefault()
+//     e.stopPropagation()
+//   }
+// }
 
 function moveDodgerLeft() {
   var leftNumbers = dodger.style.left.replace('px', '')
