@@ -40,8 +40,8 @@ function createRock(x) {
   GAME.appendChild(rock)
  
   function moveRock(top) {
-      rock.style.top = `${top += 2}px`
-      if ( top < 360 ) {
+      rock.style.top = `${top -= 2}px`
+      if ( top > 360 ) {
         window.requestAnimationFrame(moveRock)
     }
   }
