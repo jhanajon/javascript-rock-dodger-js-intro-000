@@ -68,7 +68,7 @@ function endGame() {
     START.innerHTML = 'Play again?'
     START.style.display = 'inline'
     return alert = ("YOU LOSE!")
-}
+
 
 function moveDodger(e) {
  if (e.which === LEFT_ARROW) {
